@@ -35,13 +35,14 @@ function gradeQuiz(candidateAnswers) {
 
   let grade = 0
   let answersCorrect = 0
+  let number = ["1)", "2)", "3)", "4)", "5)"]
   for (let i = 0; i < candidateAnswers.length; i++) {
 
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      console.log(`${questions[i]} \n"Your Answer:" ${candidateAnswers[i]} \n"Correct Answer:" ${correctAnswers[i]}"`);
+      console.log(`${number[i]} ${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}"`);
       answersCorrect += 1;
     } else {
-      console.log(`${questions[i]} \n"Your Answer;" ${candidateAnswers[i]} \n"Correct Answer:" ${correctAnswers[i]}"`);
+      console.log(`${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}"`);
     }
 
   }
