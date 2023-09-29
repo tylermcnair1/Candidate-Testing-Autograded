@@ -38,10 +38,10 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < candidateAnswers.length; i++) {
 
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      console.log(`"Your Answer:  ${candidateAnswers[i]} \n "Correct Answer:" ${correctAnswers[i]}"`);
+      console.log(`${questions[i]} \n"Your Answer:" ${candidateAnswers[i]} \n"Correct Answer:" ${correctAnswers[i]}"`);
       answersCorrect += 1;
     } else {
-      console.log(`"Your Answer:  ${candidateAnswers[i]} \n "Correct Answer:" ${correctAnswers[i]}"`);
+      console.log(`${questions[i]} \n"Your Answer;" ${candidateAnswers[i]} \n"Correct Answer:" ${correctAnswers[i]}"`);
     }
 
   }
@@ -50,28 +50,31 @@ function gradeQuiz(candidateAnswers) {
 
   if (answersCorrect == 5) {
     grade = 5 / questions.length * 100
-    console.log("passed")
+    console.log("Overall Grade: 100% (5 of 5 responses correct)")
     return grade;
   } else if (answersCorrect === 4) {
     grade = 4 / questions.length * 100
-    console.log("passed")
+    console.log("Overall Grade: 80% (4 of 5 responses correct)")
     return grade;
   } else if (answersCorrect === 3) {
     grade = 3 / questions.length * 100
+    console.log("Overall Grade: 60% (3 of 5 responses correct)")
     return grade;
   } else if (answersCorrect === 2) {
     grade = 2 / questions.length * 100
+    console.log("Overall Grade: 40% (2 of 5 responses correct)")
     return grade
   } else if (answersCorrect === 1) {
     grade = 1 / questions.length * 100
+    console.log("Overall Grade: 20% (1 of 5 responses correct)")
     return grade
   } else {
     grade = 0 / questions.length * 100
+    console.log("Overall Grade: 0% (0 of 5 responses correct)")
     return grade
   }
-
-
-
+  
+  
 
 }
 
